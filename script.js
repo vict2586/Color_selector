@@ -1,6 +1,13 @@
 "use strict";
 
-window.addEventListener("DOMContentLoaded", getColor);
+window.addEventListener("DOMContentLoaded", start);
+
+//Calls the first function
+function start() {
+
+  getColor();
+
+};
 
 
 //Get color value from colorwheel
@@ -8,19 +15,19 @@ function getColor() {
 
     colorSelector.addEventListener("input", colorTheBox);
 
-}
+};
 
 
-//Show color in box "preview"
+//Show color in box
 function colorTheBox(event) {
 
   let hexValue = (document.querySelector(".showColor").style.backgroundColor = event.target.value);
 
-  console.log(hexValue);
+  //console.log(hexValue);
 
   showHex(hexValue);
 
-}
+};
 
 
 //Show HEX
@@ -29,12 +36,11 @@ function showHex(hexValue) {
 document.getElementById("hex").innerHTML = "HEX: " + hexValue;
 
 HexToRgb(hexValue);
-}
+};
 
 
 //From HEX to RGB
 function HexToRgb(hexValue) {
-
 
 //Substring of hex color
 const r = hexValue.substring(1, 3);
@@ -47,21 +53,23 @@ const convertedR = parseInt(r, 16);
 const convertedG = parseInt(g, 16);
 const convertedB = parseInt(b, 16);
 
+
 getHslValue(convertedR, convertedG, convertedB);
 
 showRgb(convertedR, convertedG, convertedB);
 
-}
+};
 
 
 //Show RGB
 function showRgb(convertedR, convertedG, convertedB) {
 
-document.getElementById("rgb").innerHTML = `RGB: ${convertedR}, ${convertedG}, ${convertedB}`;
+document.getElementById("rgb").innerHTML = `RGB: (${convertedR}, ${convertedG}, ${convertedB})`;
 
-}
+};
 
-//From RGB to HSL
+
+//From RGB to HSL --> black box
 function getHslValue(r, g, b) {
 
   r /= 255;
@@ -100,15 +108,16 @@ function getHslValue(r, g, b) {
   s *= 100;
   l *= 100;
 
-  showHsl(h, s, l);
-}
+  //console.log("hsl(%f,%f%,%f%)", h, s, l);
 
-//console.log("hsl(%f%,%f%,%f%)", h, s, l);
+  showHsl(h, s, l);
+
+};
 
 
 //Show HSL
 function showHsl(h, s, l) {
 
-document.getElementById("hsl").innerHTML = `HSL: ${h.toFixed(0)}, ${s.toFixed(0)}, ${l.toFixed(0)}`;
+document.getElementById("hsl").innerHTML = `HSL: ${h.toFixed(0)}%, ${s.toFixed(0)}%, ${l.toFixed(0)}%`;
 
-}
+};
