@@ -27,6 +27,7 @@ h1 {
   width: 100px;
   margin-left: 60px;
   background-color: whitesmoke;
+  border-radius: 50px;
 }
 
 .colorDetail {
