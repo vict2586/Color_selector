@@ -1,5 +1,7 @@
 "use strict";
 
+//I dont know how to Improved the code more
+
 window.addEventListener("DOMContentLoaded", start);
 
 //Calls the first function
