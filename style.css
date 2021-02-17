@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 50px;
+}
+
+.colorSelector {
+  display: flex;
+  justify-content: center;
+}
+
+#colorSelector {
+  margin-bottom: 20px;
+}
+
+.colorWheel {
+  margin-right: 40px;
+}
+
+.showColor {
+  height: 100px;
+  width: 100px;
+  margin-left: 60px;
+  background-color: whitesmoke;
+}
+
+.colorDetail {
+  margin-top: 63px;
+}
