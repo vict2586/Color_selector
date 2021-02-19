@@ -4,32 +4,52 @@
 }
 
 h1 {
+  margin: 2rem 0 1rem 0;
   text-align: center;
-  text-transform: uppercase;
-  margin: 50px;
 }
 
-.colorSelector {
+#harmonies {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin: 0 0 3rem 5rem;
 }
 
-#colorSelector {
-  margin-bottom: 20px;
+#colorthing {
+  margin: 0 0 2rem 37rem;
 }
 
-.colorWheel {
-  margin-right: 40px;
+#colors {
+  display: flex;
+  gap: 1em;
+  margin: 1rem 0 0 20rem;
 }
 
-.showColor {
-  height: 100px;
-  width: 100px;
-  margin-left: 60px;
-  background-color: whitesmoke;
-  border-radius: 50px;
+.colorbox {
+  border: 1px solid black;
+  width: 10vw;
+  height: 10vw;
 }
 
-.colorDetail {
-  margin-top: 63px;
+.colorbox1 {
+  border: 1px solid black;
+  width: 10vw;
+  height: 10vw;
+}
+
+.colorbox2 {
+  border: 1px solid black;
+  width: 10vw;
+  height: 10vw;
+}
+
+.colorbox4 {
+  border: 1px solid black;
+  width: 10vw;
+  height: 10vw;
+}
+
+.colorbox5 {
+  border: 1px solid black;
+  width: 10vw;
+  height: 10vw;
 }
